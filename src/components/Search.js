@@ -12,6 +12,9 @@ export const Search = () => {
         borderColor: "#000000",
         backgroundColor: 'black',
         color: 'white',
+        '&:hover': {
+            background: "black",
+        },
     });
     const MyInput = styled(Input)({
         borderBottomRightRadius: 18,
