@@ -1,32 +1,52 @@
 import React from 'react';
-import {Box, Stack, Typography} from "@mui/material";
+import {Box, Button, Stack, styled, Typography} from "@mui/material";
 import {grey} from '@mui/material/colors';
-import {HamiChatItem} from "../components/HamiChatItem";
+import {BsArrowLeft, BsBell, BsFillPlayFill} from "react-icons/bs";
 
 
 export const HamiChat = () => {
-    const info = [
-        {
-            title: "دپارتمان فروش و پشتیبانی",
-            description: "سوالات مربوط به بخش فروش و پشتیبانی"
-        },
-        {
-            title: "دپارتمان فنی",
-            description: "سوالات و گزارشات فنی"
-        },
-        {
-            title: "دپارتمان مالی",
-            description: "سوالات مربوط به فاکتور ها و امور مالی"
-        },
-    ]
+    const MyButton = styled(Button)({
+        borderRadius: 18,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: "#000000",
+        color: 'black',
+        marginTop: 20,
+        marginRight: 'auto'
+    });
     return (
         <>
-            <Box sx={{p: 3, backgroundColor: 'primary.main', color: grey[800]}}>
-                <Typography variant="body1">برای ما پیامی بفرستید</Typography>
-                {info.map((item) => (
-                    <HamiChatItem title={item.title} description={item.description}/>
-                ))}
+            <Box sx={{
+                py: 3, mt: 4, mx: 'auto', width: '88%',
+                boxShadow: 3, borderRadius: 4, backgroundColor: 'white', zIndex: 5
+            }}>
+                <Stack sx={{width: '90%', mx: 'auto'}}>
+                    <Typography sx={{mr: 'auto'}}>مشاهده همه</Typography>
+                    <Stack sx={{
+                        borderBottomStyle: 'solid',
+                        borderBottomWidth: 1,
+                        borderBottomColor: "#000000",
+                        paddingBottom: 4,
+                    }} direction="row" alignItems='center'>
+                        <BsFillPlayFill color='black' size={24}/>
+                        <Stack sx={{mr: 1}}>
+                            <Typography>پشتیبانی آنلاین</Typography>
+                            <Typography>تماس صوتی و تصویری</Typography>
+                        </Stack>
+                        <Stack sx={{
+                            mr: 'auto',
+                            mt: 4,
+                            textAlign: 'center',
+                            alignItems: 'center'
+                        }}>
+                            <BsBell color='black'/>
 
+                        </Stack>
+                    </Stack>
+                    <MyButton variant="outlined" endIcon={<BsArrowLeft width={200}/>}>
+                        <Typography sx={{ml: 1}}> شروع مکالمه جدید</Typography>
+                    </MyButton>
+                </Stack>
             </Box>
 
         </>
