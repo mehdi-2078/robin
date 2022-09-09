@@ -31,7 +31,7 @@ export const Search = () => {
 
     return (
         <Box sx={{py: 3, mt: 2, mx: 'auto', width: '88%', boxShadow: 3, borderRadius: 4, mb: 10}}>
-            <Stack sx={{width: '90%', mx: 'auto'}}>
+            <Stack sx={{width: '82%', mx: 'auto'}}>
                 <Typography>جواب خودتان را پیدا کنید</Typography>
                 <Stack direction="row" sx={{marginTop: 2}}>
                     <MyInput variant="outlined" type="text" placeholder="سوال خود را تایپ کنید"/>

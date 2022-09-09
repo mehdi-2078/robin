@@ -4,7 +4,7 @@ import {grey} from '@mui/material/colors';
 import {BsArrowLeft, BsBell, BsFillPlayFill} from "react-icons/bs";
 
 
-export const HamiChat = () => {
+export const Support = () => {
     const MyButton = styled(Button)({
         borderRadius: 18,
         borderStyle: 'solid',
@@ -17,10 +17,10 @@ export const HamiChat = () => {
     return (
         <>
             <Box sx={{
-                py: 3, mt: 4, mx: 'auto', width: '88%',
+                py: 3, mt: 3, mx: 'auto', width: '88%',
                 boxShadow: 3, borderRadius: 4, backgroundColor: 'white', zIndex: 5
             }}>
-                <Stack sx={{width: '90%', mx: 'auto'}}>
+                <Stack sx={{width: '94%', mx: 'auto'}}>
                     <Typography sx={{mr: 'auto'}}>مشاهده همه</Typography>
                     <Stack sx={{
                         borderBottomStyle: 'solid',
